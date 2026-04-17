@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3 meses contigo</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@500;700;800&display=swap");
+
+    :root {
+      --red: #c81d25;
+      --red-dark: #8f1117;
+      --red-soft: #ffe9eb;
+      --black: #111111;
+      --black-soft: #2e2e2e;
+      --white: #ffffff;
+      --white-soft: #f7f7f7;
+      --shadow: none;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      color: var(--black);
+      font-family: "Manrope", sans-serif;
+      background: var(--white);
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'180'%20height%3D'180'%20viewBox%3D'0%200%20180%20180'%3E%0A%20%20%3Crect%20width%3D'180'%20height%3D'180'%20fill%3D'white'%2F%3E%0A%20%20%3Cg%20transform%3D'translate(42%2040)'%3E%0A%20%20%20%20%3Cpath%20d%3D'M0%20-10%20C6%20-18%2016%20-16%2018%20-8%20C25%20-7%2030%202%2025%2010%20C27%2019%2020%2027%2010%2027%20C4%2033%20-8%2033%20-13%2026%20C-22%2026%20-28%2018%20-24%2010%20C-27%202%20-21%20-8%20-11%20-10%20C-9%20-16%20-3%20-18%200%20-10%20Z'%20fill%3D'rgb(200%2C29%2C37)'%2F%3E%0A%20%20%20%20%3Cpath%20d%3D'M-5%20-2%20C-1%20-8%208%20-8%2010%20-2%20C12%204%208%2010%201%2011%20C-6%2010%20-9%204%20-5%20-2%20Z'%20fill%3D'rgb(143%2C17%2C23)'%2F%3E%0A%20%20%20%20%3Cpath%20d%3D'M0%2027%20L0%2042'%20stroke%3D'rgb(17%2C17%2C17)'%20stroke-width%3D'2'%20stroke-linecap%3D'round'%2F%3E%0A%20%20%20%20%3Cpath%20d%3D'M0%2034%20C8%2031%2012%2033%2015%2038%20C10%2039%206%2041%200%2039%20Z'%20fill%3D'rgb(143%2C17%2C23)'%2F%3E%0A%20%20%20%20%3Cpath%20d%3D'M0%2032%20C-7%2029%20-11%2031%20-14%2035%20C-9%2037%20-5%2038%200%2036%20Z'%20fill%3D'rgb(143%2C17%2C23)'%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D'translate(128%20120)%20scale(0.86)'%3E%0A%20%20%20%20%3Cpath%20d%3D'M0%20-10%20C6%20-18%2016%20-16%2018%20-8%20C25%20-7%2030%202%2025%2010%20C27%2019%2020%2027%2010%2027%20C4%2033%20-8%2033%20-13%2026%20C-22%2026%20-28%2018%20-24%2010%20C-27%202%20-21%20-8%20-11%20-10%20C-9%20-16%20-3%20-18%200%20-10%20Z'%20fill%3D'rgb(200%2C29%2C37)'%2F%3E%0A%20%20%20%20%3Cpath%20d%3D'M-5%20-2%20C-1%20-8%208%20-8%2010%20-2%20C12%204%208%2010%201%2011%20C-6%2010%20-9%204%20-5%20-2%20Z'%20fill%3D'rgb(143%2C17%2C23)'%2F%3E%0A%20%20%20%20%3Cpath%20d%3D'M0%2027%20L0%2041'%20stroke%3D'rgb(17%2C17%2C17)'%20stroke-width%3D'2'%20stroke-linecap%3D'round'%2F%3E%0A%20%20%20%20%3Cpath%20d%3D'M0%2034%20C8%2031%2012%2033%2015%2038%20C10%2039%206%2041%200%2039%20Z'%20fill%3D'rgb(143%2C17%2C23)'%2F%3E%0A%20%20%20%20%3Cpath%20d%3D'M0%2032%20C-7%2029%20-11%2031%20-14%2035%20C-9%2037%20-5%2038%200%2036%20Z'%20fill%3D'rgb(143%2C17%2C23)'%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D'translate(130%2035)%20scale(0.58)'%3E%0A%20%20%20%20%3Cpath%20d%3D'M0%20-10%20C6%20-18%2016%20-16%2018%20-8%20C25%20-7%2030%202%2025%2010%20C27%2019%2020%2027%2010%2027%20C4%2033%20-8%2033%20-13%2026%20C-22%2026%20-28%2018%20-24%2010%20C-27%202%20-21%20-8%20-11%20-10%20C-9%20-16%20-3%20-18%200%20-10%20Z'%20fill%3D'rgb(200%2C29%2C37)'%2F%3E%0A%20%20%20%20%3Cpath%20d%3D'M-5%20-2%20C-1%20-8%208%20-8%2010%20-2%20C12%204%208%2010%201%2011%20C-6%2010%20-9%204%20-5%20-2%20Z'%20fill%3D'rgb(143%2C17%2C23)'%2F%3E%0A%20%20%20%20%3Cpath%20d%3D'M0%2027%20L0%2040'%20stroke%3D'rgb(17%2C17%2C17)'%20stroke-width%3D'2'%20stroke-linecap%3D'round'%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+      background-size: 180px 180px;
+      background-repeat: repeat;
+    }
+
+    .app {
+      width: min(720px, 100%);
+      background: var(--white);
+      border: 1px solid var(--black);
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .app::before {
+      display: none;
+    }
+
+    .badge {
+      width: max-content;
+      margin: 0 auto 12px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      text-align: center;
+      font-family: "Cormorant Garamond", serif;
+      line-height: 1.05;
+      color: var(--black);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 7vw, 3rem);
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 5vw, 2.3rem);
+      margin-bottom: 10px;
+    }
+
+    .panel {
+      margin-top: 16px;
+      background: var(--white);
+      border: 1px solid var(--black);
+      border-radius: 16px;
+      padding: 20px 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .text {
+      margin: 0 auto;
+      max-width: 64ch;
+      color: var(--black-soft);
+      font-size: clamp(0.97rem, 3.6vw, 1.08rem);
+      line-height: 1.62;
+      text-align: center;
+    }
+
+    .text + .text {
+      margin-top: 14px;
+    }
+
+    .love {
+      margin: 18px auto 0;
+      max-width: 34ch;
+      line-height: 1.4;
+      text-align: center;
+      color: var(--red-dark);
+      font-size: clamp(1.12rem, 4.3vw, 1.38rem);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .btn {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 14px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.98rem;
+      font-weight: 800;
+      transition: transform 150ms ease;
+    }
+
+    .btn:active {
+      transform: scale(0.99);
+    }
+
+    .btn-main {
+      margin-top: 14px;
+      color: var(--white);
+      background: var(--red);
+    }
+
+    .btn-main:hover,
+    .opt:hover {
+      transform: translateY(-1px);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .options {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .opt {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .opt.second {
+      background: var(--red);
+    }
+
+    .feedback {
+      margin-bottom: 12px;
+      border-radius: 14px;
+      padding: 16px 14px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: center;
+      overflow: hidden;
+      transform-origin: center;
+    }
+
+    .feedback.neutral {
+      background: var(--white);
+      border-color: var(--red);
+      color: var(--black);
+      box-shadow: none;
+    }
+
+    .feedback.end {
+      background: var(--black);
+      border-color: var(--red);
+      color: var(--white);
+      box-shadow: none;
+    }
+
+    .feedback.coupon {
+      background: var(--white);
+      border-color: var(--red);
+      color: var(--black);
+      box-shadow: none;
+    }
+
+    .feedback-text {
+      margin-top: 0;
+      font-size: clamp(1.18rem, 5vw, 2rem);
+      line-height: 1.26;
+      font-weight: 800;
+    }
+
+    .coupon-card {
+      position: relative;
+      border: 2px solid var(--black);
+      border-radius: 14px;
+      background: var(--white);
+      text-align: left;
+      overflow: hidden;
+    }
+
+    .coupon-head {
+      padding: 10px 12px;
+      background: var(--red);
+      color: var(--white);
+      text-align: center;
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .coupon-body {
+      padding: 12px;
+      background: var(--white-soft);
+    }
+
+    .coupon-title {
+      margin: 0 0 8px;
+      font-size: clamp(1rem, 3.8vw, 1.25rem);
+      line-height: 1.3;
+      font-weight: 800;
+      color: var(--red-dark);
+      text-align: center;
+    }
+
+    .coupon-shot {
+      margin: 0 0 10px;
+      padding: 8px 10px;
+      border: 1px solid var(--red);
+      border-radius: 8px;
+      background: var(--white);
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.35;
+      text-align: center;
+      color: var(--black);
+    }
+
+    .coupon-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    .coupon-line {
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: var(--black-soft);
+    }
+
+    .coupon-divider {
+      margin: 10px 0;
+      border-top: 1px dashed var(--red);
+    }
+
+    .coupon-code {
+      margin: 10px 0;
+      padding: 8px 10px;
+      border: 1px solid var(--black);
+      border-radius: 8px;
+      background: var(--white);
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--black);
+    }
+
+    .coupon-barcode {
+      height: 56px;
+      border: 1px solid var(--black);
+      border-radius: 6px;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          #111111 0 2px,
+          #ffffff 2px 3px,
+          #111111 3px 5px,
+          #ffffff 5px 7px,
+          #111111 7px 8px,
+          #ffffff 8px 10px,
+          #111111 10px 14px,
+          #ffffff 14px 16px,
+          #111111 16px 17px,
+          #ffffff 17px 19px,
+          #111111 19px 22px,
+          #ffffff 22px 24px,
+          #111111 24px 27px,
+          #ffffff 27px 29px
+        );
+    }
+
+    .barcode-text {
+      margin: 6px 0 0;
+      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      color: var(--black);
+      font-weight: 700;
+    }
+
+    .coupon-terms {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--black-soft);
+      font-size: 0.84rem;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .coupon-note {
+      margin: 8px 0 0;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: var(--black-soft);
+      text-align: center;
+    }
+
+    .feedback.dramatic-pop {
+      animation: dramatic-pop 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    @keyframes dramatic-pop {
+      0% {
+        opacity: 0;
+        transform: scale(0.86);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1.035);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .dramatic-flash {
+      display: none;
+    }
+
+    .dramatic-flash.show {
+      animation: none;
+    }
+
+    .dramatic-flash.show-final {
+      animation: none;
+    }
+
+    .tries {
+      margin-top: 8px;
+      max-width: 56ch;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.45;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--red-dark);
+      font-weight: 700;
+    }
+
+    body.coupon-only .app {
+      width: min(760px, 100%);
+      background: transparent;
+      border: 0;
+      padding: 0;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    body.coupon-only #mainTitle,
+    body.coupon-only #intro,
+    body.coupon-only #gift > .text,
+    body.coupon-only #gift > .options,
+    body.coupon-only #gift > .tries {
+      display: none !important;
+    }
+
+    body.coupon-only #gift {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+    }
+
+    body.coupon-only #feedback {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      border-radius: 0;
+    }
+
+    body.coupon-only .coupon-card {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 680px) {
+      .app {
+        padding: 30px;
+      }
+
+      .options {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .coupon-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <h1 id="mainTitle">Para: Emily con amor Santiago</h1>
+
+    <section id="intro" class="panel">
+      <p class="text">Hoy cumplimos 3 meses, y de verdad no sabes lo feliz que me hace tenerte en mi vida. Desde que llegaste, todo se siente diferente: mas bonito, mas especial. Cada momento a tu lado es unico, nunca es igual al anterior, y eso es algo que amo de nosotros.</p>
+      <p class="text">Me gusta recordar como empezo todo, porque de verdad me alegra haberte conocido. Eres una persona increible, y cada dia descubro algo nuevo que me hace quererte mas. Gracias por estar conmigo, por hacerme sentir asi y por llenar mis dias de alegria.</p>
+      <p class="love">Te amo, nunca lo olvides, vida de mi vida.</p>
+      <button id="go-gift" class="btn btn-main" type="button">Continuar</button>
+    </section>
+
+    <section id="gift" class="panel hidden">
+      <div id="feedback" class="feedback neutral hidden"></div>
+      <p class="text">Puedes elegir alguna de estas 2 opciones:</p>
+
+      <div class="options">
+        <button id="opt-1" class="btn opt" type="button">Nada contigo lo tengo todo</button>
+        <button id="opt-2" class="btn opt second" type="button">Maquillaje de trendy</button>
+      </div>
+
+      <p id="tries" class="tries hidden"></p>
+    </section>
+  </main>
+
+  <div id="dramaticFlash" class="dramatic-flash" aria-hidden="true"></div>
+
+  <script>
+    const intro = document.getElementById("intro");
+    const gift = document.getElementById("gift");
+    const mainTitle = document.getElementById("mainTitle");
+    const goGift = document.getElementById("go-gift");
+    const optionOne = document.getElementById("opt-1");
+    const optionTwo = document.getElementById("opt-2");
+    const feedback = document.getElementById("feedback");
+    const tries = document.getElementById("tries");
+    const dramaticFlash = document.getElementById("dramaticFlash");
+
+    let firstOptionAttempts = 0;
+    let secondOptionAttempts = 0;
+    const secondOptionMax = 3;
+    let activeTypingToken = 0;
+
+    const firstOptionMessages = [
+      "Se que mientes, puerca; te dare otra oportunidad.",
+      "No mientas, se que quieres la otra opcion.",
+      "Esa no te la creo; tu sabes cual opcion quieres de verdad.",
+      "Te estas haciendo la dificil, pero se que quieres la otra opcion.",
+      "Ultima oportunidad: deja de mentir y elige la otra opcion."
+    ];
+
+    const retryMessages = [
+      "Ya veo que prefieres el maquillaje antes que ami, te doy otra oportunidad",
+      "Sigues prefieriendo el maquillaje, no lo puedo creer ultima oportunidad"
+    ];
+
+    function typeMessage(targetEl, text, speed) {
+      activeTypingToken += 1;
+      const thisToken = activeTypingToken;
+      let index = 0;
+      targetEl.textContent = "";
+
+      function writeStep() {
+        if (thisToken !== activeTypingToken) {
+          return;
+        }
+
+        targetEl.textContent = text.slice(0, index);
+        index += 1;
+
+        if (index <= text.length) {
+          const nextChar = text.charAt(index);
+          const pause = nextChar === "." || nextChar === "," ? speed + 42 : speed;
+          setTimeout(writeStep, pause);
+        }
+      }
+
+      writeStep();
+    }
+
+    function flashScreen(endMode) {
+      dramaticFlash.classList.remove("show", "show-final");
+      void dramaticFlash.offsetWidth;
+      dramaticFlash.classList.add(endMode ? "show-final" : "show");
+    }
+
+    function showMessage(text, endMode) {
+      feedback.innerHTML = '<div class="feedback-text" id="feedbackText"></div>';
+      feedback.classList.remove("hidden", "neutral", "end", "coupon");
+      feedback.classList.add(endMode ? "end" : "neutral");
+      feedback.classList.remove("dramatic-pop");
+      void feedback.offsetWidth;
+      feedback.classList.add("dramatic-pop");
+
+      const feedbackText = document.getElementById("feedbackText");
+      typeMessage(feedbackText, text, endMode ? 26 : 20);
+      flashScreen(endMode);
+      feedback.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    function showCoupon() {
+      feedback.innerHTML =
+        '<div class="coupon-card">'
+        + '<div class="coupon-head">Cupon oficial</div>'
+        + '<div class="coupon-body">'
+        + '<p class="coupon-title">Cupon valido para comprar maquillaje en Trendy</p>'
+        + '<p class="coupon-shot">Sacale pantallazo a este cupon y enviaselo a tu novio.</p>'
+        + '<div class="coupon-grid">'
+        + '<p class="coupon-line"><strong>Titular:</strong> Emily</p>'
+        + '<p class="coupon-line"><strong>Folio:</strong> TRN-2026-0417</p>'
+        + '<p class="coupon-line"><strong>Emision:</strong> 17/04/2026</p>'
+        + '<p class="coupon-line"><strong>Vigencia:</strong> Este fin de semana</p>'
+        + '</div>'
+        + '<div class="coupon-divider"></div>'
+        + '<p class="coupon-code">TRENDY-EMILY-3M</p>'
+        + '<div class="coupon-barcode" aria-hidden="true"></div>'
+        + '<p class="barcode-text">8 50722 91304 6</p>'
+        + '<ul class="coupon-terms">'
+        + '<li>Valido para una compra de maquillaje en Trendy.</li>'
+        + '<li>Uso unico y personal.</li>'
+        + '<li>No acumulable con otras promociones.</li>'
+        + '</ul>'
+        + '<p class="coupon-note">Presenta este cupon a tu novio para reclamar tu regalo.</p>'
+        + '</div>'
+        + '</div>';
+
+      feedback.classList.remove("hidden", "neutral", "end", "coupon", "dramatic-pop");
+      feedback.classList.add("coupon", "dramatic-pop");
+      document.body.classList.add("coupon-only");
+      feedback.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    function lockChoices() {
+      optionOne.disabled = true;
+      optionTwo.disabled = true;
+      optionOne.style.opacity = "0.6";
+      optionTwo.style.opacity = "0.6";
+      optionOne.style.cursor = "not-allowed";
+      optionTwo.style.cursor = "not-allowed";
+    }
+
+    function onlySecondOptionAllowed() {
+      optionOne.disabled = true;
+      optionOne.style.opacity = "0.6";
+      optionOne.style.cursor = "not-allowed";
+      optionTwo.disabled = false;
+      optionTwo.style.opacity = "1";
+      optionTwo.style.cursor = "pointer";
+    }
+
+    goGift.addEventListener("click", () => {
+      intro.classList.add("hidden");
+      gift.classList.remove("hidden");
+      mainTitle.textContent = "Tengo un regalo para ti";
+    });
+
+    optionOne.addEventListener("click", () => {
+      firstOptionAttempts += 1;
+      const msgIndex = Math.min(firstOptionAttempts - 1, firstOptionMessages.length - 1);
+      const selectedMessage = firstOptionMessages[msgIndex];
+      const firstMax = firstOptionMessages.length;
+      const firstProgress = Math.min(firstOptionAttempts, firstMax);
+
+      tries.textContent = "Oportunidad " + firstProgress + "/" + firstMax;
+      tries.classList.remove("hidden");
+
+      if (msgIndex === firstOptionMessages.length - 1) {
+        onlySecondOptionAllowed();
+      }
+      showMessage(selectedMessage, false);
+    });
+
+    optionTwo.addEventListener("click", () => {
+      secondOptionAttempts += 1;
+      const secondProgress = Math.min(secondOptionAttempts, secondOptionMax);
+      const isFinalSecondAttempt = secondOptionAttempts >= secondOptionMax;
+
+      tries.textContent = "Oportunidad " + secondProgress + "/" + secondOptionMax;
+      tries.classList.remove("hidden");
+
+      if (isFinalSecondAttempt) {
+        showCoupon();
+        lockChoices();
+        return;
+      }
+
+      const msgIndex = Math.min(secondOptionAttempts - 1, retryMessages.length - 1);
+      showMessage(retryMessages[msgIndex], false);
+    });
+  </script>
+</body>
+</html>
